@@ -1,0 +1,15 @@
+{
+  // The digest contains emoji; Windows terminals default to cp1252 and would
+  // mangle them. The script forces UTF-8 itself, this just keeps the editor
+  // and terminal consistent.
+  "files.encoding": "utf8",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // .env holds the bot token - keep it out of search results and quick-open.
+  "search.exclude": {
+    "**/logs": true,
+    "**/js-version": true
+  },
+
+  "python.analysis.typeCheckingMode": "basic"
+}

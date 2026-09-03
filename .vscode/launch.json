@@ -1,0 +1,57 @@
+{
+  // Pick one of these from the Run and Debug panel (Ctrl+Shift+D), then press F5.
+  // The "Preview" entries send nothing to Discord - use those while editing.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview: closing digest (no post)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/market_bot.py",
+      "args": ["--dry-run"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Preview: morning brief (no post)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/market_bot.py",
+      "args": ["--morning", "--dry-run"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Check credentials only",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/market_bot.py",
+      "args": ["--check"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "POST closing digest to Discord",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/market_bot.py",
+      "args": [],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "POST morning brief to Discord",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/market_bot.py",
+      "args": ["--morning"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    }
+  ]
+}
